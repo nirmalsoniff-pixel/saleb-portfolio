@@ -4406,13 +4406,6 @@ font-size:28px;
 
 }
 
-/* Canva Full Width */
-
-.skill-card:last-child{
-
-    grid-column:1/-1;
-
-}
 
 /* Tablet */
 
@@ -4569,4 +4562,109 @@ grid-template-columns:1fr;
 .footer-bottom {
     color: #a5a5a5;
     font-size: 15px;
+}
+
+/*--------------------------------------------------------------
+# Project Gallery
+--------------------------------------------------------------*/
+
+.gallery-img{
+
+    width:100%;
+
+    border-radius:18px;
+
+    transition:.45s;
+
+    cursor:pointer;
+
+}
+
+.glightbox{
+
+    display:block;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+}
+
+.gallery-img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*--------------------------------------------------------------
+# Project Navigation
+--------------------------------------------------------------*/
+
+/* Navigation Section */
+/* ===========================
+   Project Navigation
+=========================== */
+.nav-card,
+.nav-current{
+    background:#1f1f1f;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+
+    padding:20px 24px;
+
+    height:100px;      /* was 140px */
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    transition:.35s;
+}
+
+.nav-card h5{
+    font-size:1.1rem;   /* was around 1.9rem */
+    margin-top:6px;
+    margin-bottom:0;
+    color:#fff;
+    font-weight:600;
+}
+
+.nav-current h4{
+    font-size:1.3rem;   /* was around 2rem */
+    margin-top:6px;
+    margin-bottom:0;
+    color:#fff;
+    font-weight:600;
+}
+
+.nav-card small,
+.nav-current small{
+    font-size:0.8rem;
+    color:#8a8a8a;
+}
+/*--------------------------------------------------------------
+# Hero Image
+--------------------------------------------------------------*/
+
+.hero-image-wrapper{
+
+    background:#1e1e1e;
+
+    padding:20px;
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s;
+
+}
+
+.hero-image-wrapper:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
 }
