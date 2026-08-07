@@ -176,6 +176,7 @@
     });
 
   });
+  
 
   /**
    * Init swiper sliders

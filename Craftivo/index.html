@@ -1206,7 +1206,8 @@ Explore a selection of my UI/UX, Product Design, Branding, and Graphic Design pr
 
   </div>
 </div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-logo filter-social filter-uiux">
+
+ <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-logo filter-social filter-uiux">
   <div class="portfolio-card">
 
     <div class="portfolio-image-container">
@@ -1255,7 +1256,50 @@ Explore a selection of my UI/UX, Product Design, Branding, and Graphic Design pr
 
   </div>
 </div>
-    </section><!-- /Portfolio Section -->
+
+<!-- View All Projects -->
+<!-- View All Projects -->
+
+<div class="col-lg-4 col-md-6 portfolio-item isotope-item view-all-item">
+
+    <a href="projects/projects.html"
+       class="portfolio-content h-100 view-all-card">
+
+        <div class="view-all-wrapper">
+
+            <div class="view-icon">
+                <i class="bi bi-grid-3x3-gap-fill"></i>
+            </div>
+
+            <h3>View All Projects</h3>
+
+            <p>
+                Explore all branding, UI/UX and graphic design projects.
+            </p>
+
+            <span class="view-btn">
+                Explore Portfolio
+                <i class="bi bi-arrow-right"></i>
+            </span>
+
+        </div>
+
+    </a>
+
+</div>
+
+</div> <!-- isotope-container -->
+
+</div> <!-- isotope-layout -->
+
+</div> <!-- container -->
+
+</section>
+<!-- /Portfolio Section -->
+
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+    <!-- /Portfolio Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -1477,5 +1521,44 @@ let's build something meaningful together.
 <!-- Main JS -->
 <script src="assets/js/main.js"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const filterButtons = document.querySelectorAll(".portfolio-filters li");
+
+    const veljia = document.querySelector(
+        '.portfolio-item.filter-social.filter-uiux'
+    );
+
+    const viewAll = document.querySelector(".view-all-item");
+
+    filterButtons.forEach(btn => {
+
+        btn.addEventListener("click", function () {
+
+            const filter = this.getAttribute("data-filter");
+
+            if (filter === "*") {
+
+                if (veljia) veljia.style.display = "none";
+                if (viewAll) viewAll.style.display = "block";
+
+            } else {
+
+                if (veljia) veljia.style.display = "";
+                if (viewAll) viewAll.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+    // Initial state (All Work)
+    if (veljia) veljia.style.display = "none";
+    if (viewAll) viewAll.style.display = "block";
+
+});
+</script>
 </body>
 </html>
